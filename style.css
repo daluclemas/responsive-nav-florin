@@ -1,0 +1,132 @@
+*,html{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@font-face{
+    font-family:poppins;
+    src:url('poppins/Poppins-Regular.ttf');
+}
+
+body{
+    font-family:poppins,sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+
+ .btn{
+    height:30px;
+    width:30px;
+    background:rebeccapurple;
+    position:fixed;
+    top:20px;
+    right:20px;
+    border-radius:5px;
+    cursor:pointer;
+    padding-top:1px;
+    transition:top 0.5s ease-in-out;
+}
+
+.btn div{
+    width:20px;
+    height:5px;
+    background:white;
+    border-radius:2px;
+    margin:3px auto;
+}
+
+.nav{
+    position:fixed;
+    background-color: rebeccapurple;
+    top:0;
+    right:0;
+    padding:2rem;
+    transform:translateX(100%);
+    height:100vh;
+    transition:transform 0.5s ease-in-out;
+}
+
+.nav ul{
+    padding: 0;
+    margin:0;
+    list-style-type:none;
+}
+
+.nav ul li{
+    padding:2rem 0;
+    color:white;
+    text-decoration:none;
+    text-transform:capitalize;
+}
+
+.nav.active{
+    transform:translateX(0);
+}
+
+.btn.active{
+    transform:translateX(-126px);
+    top:0px;
+} 
+
+
+@media (max-width:992px) and (min-width:769px){
+    .btn{
+        height:40px;
+        width:40px;
+        top:20px;
+        right:20px;
+        border-radius:5px;
+        transition:transform 0.5s ease-in-out;
+    }
+    
+    .btn div{
+        width:30px;
+        height:5px;
+        margin:5px auto;
+    }
+    
+    .nav{
+        top:85%;
+        padding:2rem;
+        width:100%;
+        height:auto;
+        text-align:center;
+        display:none;
+    }
+    
+    .nav ul{
+        padding: 0;
+        margin:0;
+        list-style-type:none;
+    }
+    
+    .nav ul li{
+        display:inline-block;
+        padding:1rem;
+    }
+
+    .nav.active{
+        display:block;
+    }
+    
+    .active.btn{
+        transform:translateY(537px);
+        right:0px;
+    }
+}
+
+@media (min-width:993px){
+    .btn{
+        display:none;
+    }
+
+    .nav{
+        display:block;
+        transform:translateX(0);
+    }
+
+
+}
